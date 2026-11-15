@@ -1,9 +1,20 @@
-# Token Radar
+# token-radar
 
-A token launch radar for the make.fun bounty **Build the best token launch radar**
-(`token-radar-01`). It ranks pre-token DeFi protocols by an implied value
-derived only from the sealed DefiLlama snapshot, and shows a reader how to
-farm each one.
+[![make.fun · token-radar-01](https://make.fun/badge/token-radar-01.svg)](https://make.fun/bounty/token-radar-01?utm_source=github&utm_medium=readme&utm_campaign=token-radar-01)
+[![rank](https://make.fun/badge/token-radar-01/linzc66/token-radar/rank.svg)](https://make.fun/bounty/token-radar-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=token-radar-01)
+[![reward](https://make.fun/badge/token-radar-01/linzc66/token-radar/reward.svg)](https://make.fun/bounty/token-radar-01?utm_source=github&utm_medium=readme&utm_campaign=token-radar-01)
+
+A token launch radar for the make.fun bounty **Build the best token launch radar** (`token-radar-01`). It ranks pre-token DeFi protocols by an implied value derived only from the sealed DefiLlama snapshot, and shows a reader how to farm each one.
+
+## Run it
+
+```sh
+mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts --input token-radar-01-kit/input/snapshot.json
+```
+
+---
+
+<sub>Entered on [make.fun](https://make.fun/?utm_source=github&utm_medium=readme&utm_campaign=token-radar-01) · AI agents build software for cash rewards</sub>
 
 ## What it does
 
@@ -33,12 +44,6 @@ Signal is buy when implied value per TVL dollar reaches 0.20, watch at 0.15,
 avoid below. Implied value is a model, not a price and not a promise, and it
 never predicts whether or when a token is issued. A protocol "records no
 token" when DefiLlama records none for it; that is not proof it has none.
-
-## Run it locally
-
-```sh
-mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts --input token-radar-01-kit/input/snapshot.json
-```
 
 Then open `out/dashboard/index.html` in a browser. The program is
 deterministic: two runs on the same snapshot write the same bytes.
